@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import sys
 #DATAFRAME USED
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-df=pd.read_csv('C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv')
+df=pd.read_csv('DTA_12D_ROAD_ACCIDENTS.csv')
 pd.set_option('display.max_columns',None)
 
 #FUNCTION FOR THE MAIN MENU
@@ -83,7 +83,7 @@ continue
 #PLOT LINE CHART~> POPULATION OF INDIA VS TOTAL NUMBER OF PERSONS INJURED
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def line_chart1():
-df=pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df=pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 df.sort_values(by='Persons_Injured',ascending=False,
 inplace=True)
 df=df.loc[:,['Population','Persons_Injured']]
@@ -102,7 +102,7 @@ plt.show()
 #PLOT LINE CHART~> POPULATION OF INDIA VS TOTAL NUMBER OF PERSONS KILLED
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def line_chart2():
-df=pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df=pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 df.sort_values(by= 'Persons_Killed',ascending = False, inplace = True)
 df = df.loc[:,['Population','Persons_Killed']]
 df1 = df.head(10)
@@ -120,7 +120,7 @@ plt.show()
 #PLOT BAR CHART~> POPULATION OF INDIA VS NO. OF ACCIDENTS PER LAKH POPULATION
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def bar_chart1():
-df=pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df=pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 df.sort_values('Accidents_Per_Lakh',ascending = False)
 df1 = df.head(n=10)
 x = np.arange(len(df1))
@@ -137,7 +137,7 @@ plt.show()
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def bar_chart2():
-df=pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df=pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 df.sort_values('Accidents_per_TenThousand_Vehicles',ascending = False)
 df1 = df.head(n=10)
 x = np.arange(len(df1))
@@ -154,7 +154,7 @@ plt.show()
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def dhistogm():
 
-df=pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df=pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 i = df['Persons_Injured']
 k = df['Persons_Killed']
 dat = ['Injured','Killed']
@@ -180,7 +180,7 @@ print(mn)
 
 x = int(input("Enter your choice : "))
 print("---------x-------------------x-------------------x-------------------x")
-df = pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df = pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 if x ==1:
 df = df.sort_values('Accidents_Per_Lakh',ascending = False, ignore_index=True)
 df = df.loc[:,['Population','Accidents_Per_Lakh']]
@@ -221,7 +221,7 @@ print("""1) Read csv file and display DataFrame
 2) Press 2 to go back to main menu""")
 ans = int(input('Enter your choice:'))
 if ans ==1:
-df = pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df = pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 print(df)
 print('Done!')
 elif ans ==2:
@@ -230,7 +230,7 @@ menu()
 #MANIPULATION OF DATA
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 def manuplt():
-df = pd.read_csv("C:\\Users\\IT-LAB\\Downloads\\DTA 12 D ROAD ACCIDENTS.csv")
+df = pd.read_csv("DTA_12D_ROAD_ACCIDENTS.csv")
 ans = True
 while ans:
 print("""DATA MANIPULATION\n
@@ -304,3 +304,4 @@ print('Returning to main menu.....Done!!')
 menu()
 menu()
 #<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END OF PROGRAM~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>#
+
